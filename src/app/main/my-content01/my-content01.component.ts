@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-my-content01',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyContent01Component implements OnInit {
 
-  constructor() { }
+  title = 'JSON to Table Example';
+
+  constructor(private httpService: HttpClient) { }
+
+  arrBirds: string [];
+  arrBirdsText: string;
 
   ngOnInit() {
+    
+    
+    this.httpService.get('./assets/birds.json').subscribe(
+      data => {
+        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.
+        console.log(this.arrBirds, "ttttt");
+        this.arrBirdsText = this.arrBirds[0]["Scientific Name"];
+
+        //  console.log(this.arrBirds[1]);
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }
+    );
   }
 
 }
