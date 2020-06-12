@@ -1,0 +1,15 @@
+<form #halloagain="ngForm" (ngSubmit)="newText(halloagain.value)">
+
+  <label>Neuer Text</label><br>
+  <textarea 
+    type="text" 
+    name="name" 
+    [(ngModel)]="username"
+    [value]="username"
+    rows="10"
+  >
+  </textarea> 
+
+
+  <button type="submit">weg</button>
+</form>

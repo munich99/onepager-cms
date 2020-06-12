@@ -15,6 +15,7 @@ export class MyContent01Component implements OnInit {
 
   arrBirds: string [];
   arrBirdsText: string;
+  logIn:boolean=true;
 
   ngOnInit() {
     
