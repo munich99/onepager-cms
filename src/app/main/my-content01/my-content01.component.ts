@@ -9,6 +9,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class MyContent01Component implements OnInit {
 
+
+
+
   title = 'JSON to Table Example';
 
   constructor(private httpService: HttpClient) { }
@@ -33,5 +36,7 @@ export class MyContent01Component implements OnInit {
       }
     );
   }
+
+  
 
 }
