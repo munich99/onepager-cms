@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyContent01Component } from './main/my-content01/my-content01.component';
+import { MyContent02Component } from './main/my-content02/my-content02.component';
 import { UploadComponent } from './upload/upload.component';
 import { MyStartComponent } from './main/my-start/my-start.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
       HeaderComponent,
       FooterComponent,
       MyContent01Component,
+      MyContent02Component,
       UploadComponent,
       MyStartComponent
    ],
