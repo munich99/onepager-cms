@@ -19,9 +19,7 @@ export class MyEditComponent implements OnInit {
     
   }
 
-  newText(newtext){    
-
-    console.log(this.username, "username");
+  newText(){  
 
     let data ={
       "firstName": "aboutme",
