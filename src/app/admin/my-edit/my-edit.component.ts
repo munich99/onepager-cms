@@ -23,10 +23,12 @@ export class MyEditComponent implements OnInit {
 
     let data ={
       "firstName": "aaa",
-      "lastName": "tztz",
+      "lastName": "bbb",
       "email": "aa",
       "mobile": "aaa"
-  }
+  };
+
+  JSON.stringify(data);
 
     this.httpService.post('./assets/process.php', data)
       .subscribe(
@@ -38,6 +40,7 @@ export class MyEditComponent implements OnInit {
         }
       );
   }
+
 
 
 
