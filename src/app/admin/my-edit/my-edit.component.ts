@@ -15,15 +15,17 @@ export class MyEditComponent implements OnInit {
   constructor(private httpService: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.username, "username");
+    
     
   }
 
   newText(newtext){    
 
+    console.log(this.username, "username");
+
     let data ={
-      "firstName": "aaa",
-      "lastName": "bbb",
+      "firstName": "aboutme",
+      "lastName": this.username,
       "email": "aa",
       "mobile": "aaa"
   };

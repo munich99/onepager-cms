@@ -15,8 +15,21 @@
 	   // converts json data into array
 	   $arr_data = json_decode($jsondata, true);
 
+
+	   foreach ($arr_data as $key => $value) {
+		   
+			if ($value['firstName'] == "aboutme") {
+				// echo $value['firstName']."--";
+				// array_push($arr_data,"ffffff");
+				$arr_data[$key]['lastName'] = $arr_data2['lastName'];
+			}
+		}
+
+
+
 	   // Push user data to array
-	   array_push($arr_data,$arr_data2);
+	  //  array_push($arr_data,$arr_data2);
+
 
        //Convert updated array to JSON
 	   $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
