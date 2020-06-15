@@ -23,11 +23,10 @@ export class MyContent01Component implements OnInit {
   ngOnInit() {
     
     
-    this.httpService.get('./assets/birds.json').subscribe(
+    this.httpService.get('./assets/data.json').subscribe(
       data => {
-        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.
-        console.log(this.arrBirds, "ttttt");
-        this.arrBirdsText = this.arrBirds[0]["Scientific Name"];
+        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.        
+        this.arrBirdsText = this.arrBirds[0]["lastName"];
 
         //  console.log(this.arrBirds[1]);
       },

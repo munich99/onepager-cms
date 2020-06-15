@@ -9,14 +9,16 @@
       <span *ngIf="!logIn">{{ arrBirdsText }}</span>
 
       <app-my-edit 
+      *ngIf="logIn"
       [text]="arrBirdsText"
-      *ngIf="logIn"></app-my-edit>
+      ></app-my-edit>
     </p> 
       
      
      
 
-  <p class="card">      
+  <p class="card">     
+     
     Ausbildung
     Ihren Meister im Schneiderhandwerk bzw. Staatlich geprüften Modegestalterin, sowie das Diplom zur staatlich geprüften Modellmacherin für Schnitt und Entwurf erwarb Sie 1991 auf der Deutschen Meisterschule für Mode in München
 

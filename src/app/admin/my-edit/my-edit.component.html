@@ -1,14 +1,24 @@
-<form #halloagain="ngForm" (ngSubmit)="newText()">
+<div>
+  <form *ngIf="!preView" #halloagain="ngForm" (ngSubmit)="newText()">
+    <label>Neuer Text</label><br>
+    <textarea 
+      type="text" 
+      name="name" 
+      [(ngModel)]="username"
+      [value]="username"
+      rows="10"
+    >
+    </textarea> 
 
-  <label>Neuer Text</label><br>
-  <textarea 
-    type="text" 
-    name="name" 
-    [(ngModel)]="username"
-    [value]="username"
-    rows="10"
-  >
-  </textarea> 
+    
 
-  <button type="submit">weg</button>
-</form>
+    <button type="submit">speichern</button>
+    
+  </form>
+
+
+  <span *ngIf="preView">{{ username }}</span>
+
+  <button type="button" (click)="preView = !preView">Vorschau <span *ngIf="preView">beenden</span></button>
+
+</div>

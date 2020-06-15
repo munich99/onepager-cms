@@ -10,6 +10,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class MyEditComponent implements OnInit {
   @Input('text') username: string;
 
+  preView = true;
+
   
 
   constructor(private httpService: HttpClient) { }
