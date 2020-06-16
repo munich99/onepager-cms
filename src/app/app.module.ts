@@ -13,9 +13,13 @@ import { MyContent02Component } from './main/my-content02/my-content02.component
 import { UploadComponent } from './upload/upload.component';
 import { MyStartComponent } from './main/my-start/my-start.component';
 import { MyEditComponent } from './admin/my-edit/my-edit.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [   
    { path:'upload', component: UploadComponent },
+   { path:'login', component: LoginComponent },
+   { path:'admin', component: AdminComponent },
    { path:'aboutme', component: MyContent01Component },
    { path:'', component: MyStartComponent },
   
@@ -30,7 +34,9 @@ const routes: Routes = [
       MyContent02Component,
       UploadComponent,
       MyStartComponent,
-      MyEditComponent
+      MyEditComponent,
+      AdminComponent,
+      LoginComponent
    ],
    imports: [
       BrowserModule,
