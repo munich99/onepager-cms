@@ -23,10 +23,10 @@ export class MyEditComponent implements OnInit {
 
   newText(){  
 
-    let data ={
+    let data = {
       "firstName": "aboutme",
       "lastName": this.username,
-      "email": "aa",
+      "part": 1,
       "mobile": "aaa"
   };
 

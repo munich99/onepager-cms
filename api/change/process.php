@@ -18,7 +18,7 @@
 
 	   foreach ($arr_data as $key => $value) {
 		   
-			if ($value['firstName'] == "aboutme") {
+			if ($value['firstName'] == "aboutme" && $value['part'] == 1 ) {
 				// echo $value['firstName']."--";
 				// array_push($arr_data,"ffffff");
 				$arr_data[$key]['lastName'] = $arr_data2['lastName'];

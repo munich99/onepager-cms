@@ -18,24 +18,35 @@ export class MyContent01Component implements OnInit {
 
   arrBirds: string [];
   arrBirdsText: string;
-  logIn:boolean=true;
+  arrBirdsShow: string []=[];
+  logIn:boolean=false;
 
-  ngOnInit() {
-    
-    
+  ngOnInit() {   
     this.httpService.get('./assets/data.json').subscribe(
       data => {
-        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.        
-        this.arrBirdsText = this.arrBirds[0]["lastName"];
-
-        //  console.log(this.arrBirds[1]);
+        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.    
+          
+        let i =0;
+        while(this.arrBirds.length > i) {
+          if(this.arrBirds[i]["firstName"] == "aboutme"){
+            this.arrBirdsShow.push(this.arrBirds[i])
+            console.log("yes");
+          }
+          i++;
+        }
+        
+        // this.arrBirdsText = this.arrBirds[0]["lastName"];
+        
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
       }
     );
+
+    
   }
 
+ 
   
 
 }
